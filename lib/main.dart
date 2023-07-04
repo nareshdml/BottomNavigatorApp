@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MaterialApp(
+void main() => runApp(const MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'BottomNavigator App',
       home: MainPage(),
@@ -32,12 +32,12 @@ class _MainPageState extends State<MainPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Color.fromRGBO(4, 16, 179, 0.612),
+        backgroundColor: const Color.fromRGBO(4, 16, 179, 0.612),
         centerTitle: true,
-        title: Text('Bottom Navigation App'),
+        title: const Text('Bottom Navigation App'),
       ),
       bottomNavigationBar: BottomNavigationBar(
-        items: <BottomNavigationBarItem>[
+        items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Homes'),
           BottomNavigationBarItem(icon: Icon(Icons.info), label: 'About'),
           BottomNavigationBarItem(
@@ -56,7 +56,7 @@ class _MainPageState extends State<MainPage> {
 class Newoption extends StatelessWidget {
   final String title;
   final Color color;
-  Newoption(this.title, this.color);
+  const Newoption(this.title, this.color);
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -69,7 +69,7 @@ class Newoption extends StatelessWidget {
         child: Center(
           child: Text(
             title,
-            style: TextStyle(fontSize: 20, color: Colors.white),
+            style: const TextStyle(fontSize: 20, color: Colors.white),
           ),
         ),
       ),
